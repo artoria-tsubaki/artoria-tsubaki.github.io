@@ -318,7 +318,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "https://img-1302665742.cos.ap-shenzhen-fsi.myqcloud.com/2020/07/tiv_whisper.jpg";
+    var bannerUrl = "https://img-1302665742.cos.ap-shenzhen-fsi.myqcloud.com/2020/07/midori.jpg";
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
@@ -340,10 +340,19 @@
                 
                 
                 
+                <a href="/categories/axios/" title="axios: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F9EBEA;">axios
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/categories/MongoDB/" title="MongoDB: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">MongoDB
+                            style="background-color: #F5EEF8;">MongoDB
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -352,17 +361,8 @@
                 <a href="/categories/JavaScript/" title="JavaScript: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">JavaScript
+                            style="background-color: #D5F5E3;">JavaScript
                         <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/axios/" title="axios: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">axios
-                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -427,7 +427,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"MongoDB","max":3},{"name":"JavaScript","max":3},{"name":"axios","max":3},{"name":"vuejs","max":3},{"name":"数据结构与算法","max":3}],
+            indicator: [{"name":"axios","max":3},{"name":"MongoDB","max":3},{"name":"JavaScript","max":3},{"name":"vuejs","max":3},{"name":"数据结构与算法","max":3}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -438,7 +438,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [1,2,1,1,2],
+                    value : [1,1,2,1,2],
                     name : '文章分类数量'
                 }
             ]
