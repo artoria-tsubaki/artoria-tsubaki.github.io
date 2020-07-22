@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="js中的面向对象语法, 破羽残蝶">
+    <meta name="keywords" content="日语学习, 破羽残蝶">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>js中的面向对象语法 | 破羽残蝶</title>
+    <title>日语学习 | 破羽残蝶</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://img-1302665742.cos.ap-shenzhen-fsi.myqcloud.com/2020/07/fish_yuyi.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img-1302665742.cos.ap-shenzhen-fsi.myqcloud.com/2020/07/zinoa_sundown.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">js中的面向对象语法</h1>
+                    <h1 class="description center-align post-title">日语学习</h1>
                 </div>
             </div>
         </div>
@@ -410,8 +410,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JavaScript/">
-                                <span class="chip bg-color">JavaScript</span>
+                            <a href="/tags/%E6%97%A5%E8%AF%AD/">
+                                <span class="chip bg-color">日语</span>
                             </a>
                         
                     </div>
@@ -422,8 +422,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/JavaScript/" class="post-category">
-                                JavaScript
+                            <a href="/categories/%E6%97%A5%E8%AF%AD/" class="post-category">
+                                日语
                             </a>
                         
                     </div>
@@ -435,28 +435,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-07-17
+                    2020-07-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-17
+                    2020-07-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    889
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    7 分
                 </div>
                 
 
@@ -471,141 +471,400 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="面向对象的程序设计"><a href="#面向对象的程序设计" class="headerlink" title="面向对象的程序设计"></a>面向对象的程序设计</h1><h2 id="6-1-理解对象"><a href="#6-1-理解对象" class="headerlink" title="6.1 理解对象"></a>6.1 理解对象</h2><h3 id="6-1-1-对象的定义"><a href="#6-1-1-对象的定义" class="headerlink" title="6.1.1 对象的定义"></a>6.1.1 对象的定义</h3><ul>
-<li>对象可以是一个无序属性的集合，其属性可以包含基本值、对象或者函数。</li>
-<li>对象可以是一组没有特定顺序的值。</li>
-<li>对象可以是散列表，无非就是一组名值对。</li>
-<li>每个对象都是基于一个引用类型创建的。</li>
-</ul>
-<h3 id="6-1-2-属性类型"><a href="#6-1-2-属性类型" class="headerlink" title="6.1.2 属性类型"></a>6.1.2 属性类型</h3><h4 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1.数据类型"></a>1.数据类型</h4><p>数据类型定义了 4 个描述其行为的特性：</p>
-<ul>
-<li>[[ Configurable ]]：表示能否删除属性，修改属性的特性，把属性修改成访问器属性，默认为 true</li>
-<li>[[ Enumerable ]]：表示能否通过 for-in 循环返回属性，默认为 true</li>
-<li>[[ Writable ]] ：表示能否修改属性的值，默认为 true</li>
-<li>[[ Value ]]：包含这个属性的数据值，默认为 undefined</li>
-</ul>
-<p><code>Object.defineProperty()</code> 方法：修改属性默认的特性，接收三个参数</p>
-<ul>
-<li>属性所在的对象</li>
-<li>属性的名字</li>
-<li>描述符的对象（这个对象的属性必须是 <code>configurable</code> 、<code>enumerable</code>、<code>writable</code> 和 <code>value</code>）</li>
-</ul>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>person<span class="token punctuation">,</span> <span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-  writable<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-  configurable<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-  value<span class="token punctuation">:</span> <span class="token string">'saber'</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">// 情况1</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// saber</span>
-person<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'artoria'</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// saber</span>
-
-<span class="token comment" spellcheck="true">// 情况2</span>
-<span class="token keyword">delete</span> person<span class="token punctuation">.</span>name
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// saber</span>
-
-<span class="token comment" spellcheck="true">// 情况3</span>
-Object<span class="token punctuation">.</span><span class="token function">defineProPerty</span><span class="token punctuation">(</span>person<span class="token punctuation">,</span> <span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-  configurable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  value<span class="token punctuation">:</span> <span class="token string">'saber'</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//抛出错误</span></code></pre>
-<p>​ 解析：</p>
-<ul>
-<li><code>writable</code> 属性设置为 false 后，它的值 “saber” 是只读的，不可修改的。</li>
-<li><code>configurable</code> 属性设置为 false 后，表示不能从对象中删除属性。</li>
-<li>把 <code>configurable</code> 属性设置为 false 后，表示属性定义为不可配置。想把它变回可配置当然就会报错。</li>
-</ul>
-<h4 id="2-访问器属性"><a href="#2-访问器属性" class="headerlink" title="2.访问器属性"></a>2.访问器属性</h4><ul>
-<li>访问器属性不包含数据值，他们包含一对 <code>getter</code> 和 <code>setter</code> 函数，其 4 个特性为：<ul>
-<li>[[ Configurable ]]：表示能否删除属性，修改属性的特性，把属性修改成访问器属性，默认为 true</li>
-<li>[[ Enumerable ]]：表示能否通过 for-in 循环返回属性，默认为 true</li>
-<li>[[ Get ]]：在读取属性时调用的函数，默认为 undefined</li>
-<li>[[ Set ]]：在写入属性时调用的函数，默认为 undefined</li>
-</ul>
+                <h1 id="日语学习"><a href="#日语学习" class="headerlink" title="日语学习"></a>日语学习</h1><h2 id="1-输入语法"><a href="#1-输入语法" class="headerlink" title="1. 输入语法"></a>1. 输入语法</h2><ol>
+<li>促音 <code>っ</code><ol>
+<li>使用 <code>ltu</code> 或 <code>xtu</code></li>
+<li>双重输入后一发音的第一个字母 <code>がっき</code> ： <code>gakki</code></li>
+</ol>
 </li>
-<li>访问器属性不能直接定义，必须使用 <code>Object.defineProperty()</code> 来定义。</li>
+</ol>
+<h2 id="2-句型语法"><a href="#2-句型语法" class="headerlink" title="2. 句型语法"></a>2. 句型语法</h2><p><strong>名词 + 【です】构成 名词谓语句</strong></p>
+<p><strong>动词谓语句可分为存在句和所在句</strong></p>
+<ol>
+<li><p>肯定：……　は　……　です</p>
+<blockquote>
+<p>わたしは王（おう）です。</p>
+</blockquote>
+</li>
+<li><p>否定：……　は　……　ではありません</p>
+<blockquote>
+<p>先生は中国人（ちゅうごくじん）ではありません。</p>
+</blockquote>
+</li>
+<li><p>疑问：……　は　……　ですか \ ですね</p>
+<blockquote>
+<p>鈴木（すずき）さんは学生（がくせい）ですか？</p>
+<p>​ 肯定回答： はい、そうです。</p>
+<p>​ 否定回答：違（ちがい）います。</p>
+<p>​ 　そうではありません。</p>
+<p>​ 学生（がくせい）ではありません。</p>
+</blockquote>
+</li>
+<li><p>“也”：……　も　……　です、……　も　……　も　……　です</p>
+<blockquote>
+<p>木村（きむら）さんも工業大学（こうぎょうだいがく）の大学院生（だいがくいんせい）です。</p>
+</blockquote>
+</li>
+<li><p>过去式肯定句：……　でした 表示曾经是</p>
+<blockquote>
+<p>父（ちち）はサッカー選手（せんしゅ）でした</p>
+<p>​ サッカー：足球运动员</p>
+<p>母（はは）は　昔（むかし）、家庭主婦（かていしゅふ）ではありません　でした。女優（じょゆう）でした。</p>
+</blockquote>
+</li>
+<li><p>拥有：……　は　……　がいます</p>
+<blockquote>
+<p>李（り）さんは弟（おとうと）がいます</p>
+</blockquote>
+</li>
+<li><p>没有：……　は　……　がいません</p>
+<blockquote>
+<p>王（おう）さんは兄弟（きょうだい）がいません</p>
+</blockquote>
+</li>
+<li><p>句子并列：……　で　……　です</p>
+<blockquote>
+<p>姉（あね）　は　会社員（かいしゃいん）で、妹（いもうと）　は　学生（がくせい）です</p>
+</blockquote>
+</li>
+<li><p>名词并列：……　と　……</p>
+<blockquote>
+<p>兄（あに）　と　弟（おとうと）がいます</p>
+</blockquote>
+</li>
+<li><p>存在动词 「あります　/　います」表示人或事物的存在</p>
+</li>
+<li><p>存在句</p>
+<p>用途：存在句着重描述在某场存在某事物</p>
+<ol>
+<li>「に」接于场所名词后，表示存在的场所</li>
+<li>「が」接于名词后表示存在的事物</li>
+<li>「います」表示存在主体为人或动物等能自由移动的事物</li>
+<li>「あります」表示存在主体为人或动物以外的、固定在某处的事物</li>
+<li>存在句往往以存在场所为主体，形式为「には」</li>
+<li>「も」用在事物的名词后，表示该场所还有其他事物</li>
+</ol>
+<blockquote>
+<p>例句</p>
+<ol>
+<li>図書室（としょしつ）には　パソコン　や　コピー機　もあります　 图书馆也有电脑和复印机</li>
+<li>庭（にわ）に　桜（さくら）の　木（き）　があります</li>
+<li>部屋（へや）には　男（おとこ）の　子（こ）　がいます</li>
+<li>研究室（けんきゅうしつ）　には　コピー機（き）　がありません</li>
+<li>図書室（としょしつ）　にも　パソコン　や　コピー機　があります　　图书室中还有电脑和复印机</li>
+</ol>
+</blockquote>
+</li>
+<li><p>所在句</p>
+<p>用途：说明某事物所在的位置</p>
+<ol>
+<li>提出某事物作为主题，用「…は」的形式表示</li>
+<li>所在的场所用「…に」的形式表示</li>
+<li>疑问词「何（なに）」（什么、什么东西），以及「だれ」（谁、什么人），加上助词「も」，与否定的谓语搭配使用，表示全面否定，意思是什么也没有，一个人也没有。</li>
+</ol>
+<blockquote>
+<p>例句：</p>
+<ol>
+<li><p>コピー機　は　　図書室（としょしつ）　にあります</p>
+</li>
+<li><p>猫（ねこ）は　テーブル　の　下（した）　にいます</p>
+</li>
+<li><p>先生　はいつも　その　部屋（へや）　にいます</p>
+</li>
+<li><p>佐藤先生　の　部屋　は　どこですか</p>
+</li>
+<li><p>A：郵便局（ゆうびんきょく）は　どこですか</p>
+<p>B：銀行（ぎんこう）の　隣（となり）です</p>
+</li>
+<li><p>A：王（おう）さん　は　どこですか</p>
+<p>B：王さん　は　今（いま）、大学（だいがく）にいません。大阪（おおさか）にいます</p>
+</li>
+<li><p>かばん　には　何（なに）もありません</p>
+</li>
+<li><p>A：吉田（よしだ）さん　は　研究室（けんきゅうしつ）　にいますか</p>
+<p>B:　いいえ、研究室　二は　だれもいません</p>
+</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<h2 id="3-日常问候语句"><a href="#3-日常问候语句" class="headerlink" title="3. 日常问候语句"></a>3. 日常问候语句</h2><p>​ 【注意点】：1. 句子越短表示与说话人关系越近</p>
+<ol>
+<li><p>初次见面，我姓陈</p>
+<blockquote>
+<p>はじめましで、陳です。</p>
+</blockquote>
+</li>
+<li><p>请多关照</p>
+<blockquote>
+<p>どうぞよろしくお願いします。</p>
+<p>どうぞよろしく。</p>
+<p>よろしく。</p>
+</blockquote>
+</li>
+<li><p>我这边才要多多关照呢</p>
+<blockquote>
+<p>こちらこそよろしくお願いします。</p>
+<p>こちらこそよろしく。</p>
+</blockquote>
+</li>
+<li><p>我了解了，这样啊</p>
+<blockquote>
+<p>そうですか</p>
+</blockquote>
+</li>
+<li><p>你好</p>
+<blockquote>
+<p>こにちは</p>
+</blockquote>
+</li>
+<li><p>早上好（当天第一次见面）</p>
+<blockquote>
+<p>おはようございます。</p>
+<p>おはよう</p>
+</blockquote>
+</li>
+<li><p>晚上好</p>
+<blockquote>
+<p>こにちは</p>
+<p>こんばんは</p>
+</blockquote>
+</li>
+<li><p>谢谢</p>
+<blockquote>
+<p>ありがとうございます</p>
+<p>ありがとう</p>
+</blockquote>
+</li>
+<li><p>好久不见</p>
+<blockquote>
+<p>お久（ひさ）しぶりですね</p>
+</blockquote>
+</li>
+<li><p>好久不见，身体好吗</p>
+<blockquote>
+<p>しばらくでしたね。お元気（げんき）ですか</p>
+</blockquote>
+</li>
+<li><p>拖您的福</p>
+<blockquote>
+<p>お陰様（かげさま）で</p>
+</blockquote>
+</li>
+<li><p>前些日子多谢招待</p>
+<blockquote>
+<p>このあいだどうもありがとうございました</p>
+</blockquote>
+</li>
+<li><p>替我向 …… 问好</p>
+<blockquote>
+<ol>
+<li><p>お父（とう）さんに　よろしく。</p>
+<p>​ ありがとうございます。</p>
+</li>
+<li><p>佐藤先生（さとうせんせい）に　よろしく　お伝（つた）えください。</p>
+<p>​ はい、お伝（つた）えします。</p>
+</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<h2 id="4-数字表示"><a href="#4-数字表示" class="headerlink" title="4. 数字表示"></a>4. 数字表示</h2><ul>
+<li><p>1-5：</p>
+<blockquote>
+<p>​ 1：いち</p>
+<p>​ 2：に</p>
+<p>​ 3：さん</p>
+<p>​ 4：よん　/　し</p>
+<p>​ 5：ご</p>
+</blockquote>
+</li>
+<li><p>6-10:</p>
+<blockquote>
+<p>​ 6：ろく</p>
+<p>​ 7：しち　/　なな</p>
+<p>​ 8：はち</p>
+<p>​ 9：きゅう　/　く</p>
+<p>​ 10：じゅう</p>
+</blockquote>
+</li>
+<li><p>100、1000、？？</p>
+<blockquote>
+<p>​ 100：ひゃく</p>
+<p>​ 1000：せん</p>
+<p>​ ？？：なん</p>
+</blockquote>
+</li>
+<li><p>实例</p>
+<blockquote>
+<p>eg：岁：歳（さい）</p>
+<p>​ 一歳（いっさい）</p>
+<p>​ 五歳（ごさい）</p>
+<p>​ 三十歳（さんじっさい）</p>
+<p>​ 例外：二十歳（はたち）</p>
+</blockquote>
+</li>
 </ul>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> book <span class="token operator">=</span> <span class="token punctuation">{</span>
-  _year<span class="token punctuation">:</span> <span class="token number">2004</span><span class="token punctuation">,</span>
-  edition<span class="token punctuation">:</span> <span class="token number">1</span>
-<span class="token punctuation">}</span>
-
-Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>book<span class="token punctuation">,</span> <span class="token string">'year'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-  <span class="token keyword">get</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>_year
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token keyword">set</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>newValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>newValue <span class="token operator">></span> <span class="token number">2004</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">this</span><span class="token punctuation">.</span>_year <span class="token operator">=</span> newValue
-      <span class="token keyword">this</span><span class="token punctuation">.</span>edition <span class="token operator">+</span><span class="token operator">=</span> newValue <span class="token operator">-</span> <span class="token number">2004</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-
-book<span class="token punctuation">.</span>year <span class="token operator">=</span> <span class="token number">2005</span>
-<span class="token function">alert</span><span class="token punctuation">(</span>book<span class="token punctuation">.</span>edition<span class="token punctuation">)</span></code></pre>
-<p>解析：</p>
+<h2 id="5-星期表示"><a href="#5-星期表示" class="headerlink" title="5. 星期表示"></a>5. 星期表示</h2><ol>
+<li>星期日：日曜日（にちようび）</li>
+<li>星期一：月曜日（げつようび）</li>
+<li>星期二：火曜日（かようび）</li>
+<li>星期三：水曜日（すいようび）</li>
+<li>星期四：木曜日（もくようび）</li>
+<li>星期五：金曜日（きんようび）</li>
+<li>星期六：土曜日（どようび）</li>
+<li>星期几：何耀日（なんようび）</li>
+</ol>
+<h2 id="6-礼貌语言"><a href="#6-礼貌语言" class="headerlink" title="6. 礼貌语言"></a>6. 礼貌语言</h2><ol>
+<li><code>ご</code>　表示对听话人的尊重</li>
+</ol>
+<blockquote>
+<p>ご兄弟（きょうだい）</p>
+<p>ご両親（りょうしん）</p>
+<p>ご家族（かぞく）</p>
+</blockquote>
+<ol start="2">
+<li><p>问询多少人</p>
+<blockquote>
+<p>何人（なんにん）兄弟</p>
+<p>​ 回答：一个人：一人（ひとり）</p>
+<p>​ 两个人：二人（ふたり）</p>
+<p>​ 三个人：三人（さんにん）</p>
+<p>​ 四个人：四人（よんにん）</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="7-指示词"><a href="#7-指示词" class="headerlink" title="7. 指示词"></a>7. 指示词</h2><h3 id="7-1-これ、それ、あれ"><a href="#7-1-これ、それ、あれ" class="headerlink" title="7.1 これ、それ、あれ"></a>7.1 これ、それ、あれ</h3><p>​ これ、それ、あれ 是指示事物的名词，相当于汉语的 “这、这个“，”那，那个“</p>
 <ul>
-<li><code>_year</code> 表示只能通过对象方法访问的 year 属性</li>
-<li>getter 函数返回 _year 的值，setter 函数通过计算来确定正确的版本。</li>
-<li>访问器属性的常见用法：设置一个属性的值会导致其他属性发生变化。</li>
-<li>只指定 getter 意味着属性时不能写，只指定 setter 函数的属性也不能读。</li>
+<li>これ：距离 <strong>说话人</strong> 较近的事物</li>
+<li>それ：距离 <strong>听话人</strong> 较近的事物</li>
+<li>あれ：距离 <strong>说话人和听话人</strong> 都比较远的事物</li>
 </ul>
-<h3 id="6-1-3-定义多个属性"><a href="#6-1-3-定义多个属性" class="headerlink" title="6.1.3 定义多个属性"></a>6.1.3 定义多个属性</h3><ul>
-<li><p><code>Object.defineProperties()</code> 方法可以通过描述符一次定义多个属性。</p>
+<blockquote>
+<p>例句</p>
+<ol>
+<li>これ　は　本（ほん）　です。 这是书。</li>
+<li>それ　は　かばん　 です。 那是包。</li>
+<li>あれ　は　テレビ　 です。 那是电视机。</li>
+</ol>
+</blockquote>
+<h3 id="7-2-この、その、あの"><a href="#7-2-この、その、あの" class="headerlink" title="7.2 この、その、あの"></a>7.2 この、その、あの</h3><p>​ この、その、あの　是用来修饰名称的，相当于汉语的 “这、这个“，”那，那个“</p>
+<blockquote>
+<p>例句</p>
+<ol>
+<li>この　カメラ　は　スミスさんのです。 这个照相机是史密斯先生的。</li>
+<li>その　自転車（じてんしゃ）　は　森（もり）さんのです。 那辆自行车是森先生的。</li>
+<li>あの　ノート　は　だれのですか。 那个笔记本是谁的？</li>
+</ol>
+</blockquote>
+<h3 id="7-3-だれですか、何（なん）ですか、どなた"><a href="#7-3-だれですか、何（なん）ですか、どなた" class="headerlink" title="7.3 だれですか、何（なん）ですか、どなた"></a>7.3 だれですか、何（なん）ですか、どなた</h3><ul>
+<li><p>不知道是什么人时用　だれ　, 不知道是什么事物用　何（なん） 询问，相当于汉语的 “谁” 和 “什么”。</p>
 </li>
-<li><p>这个方法接收两个对象参数：</p>
+<li><p>对尊长或比自己地位高的人用　どなた　询问</p>
+</li>
+<li><p>句尾后续助词　か　,一般读升调。</p>
+</li>
+</ul>
+<blockquote>
+<p>例句</p>
+<ol>
+<li>それは　何（なん）　ですか。 那是什么？</li>
+<li>あの　人（ひと）は　だれ　ですか。 那个人是谁？</li>
+<li>スミスさんは　どなた　ですか。 史密斯先生是哪位？</li>
+</ol>
+</blockquote>
+<h3 id="7-4-どれ、どの"><a href="#7-4-どれ、どの" class="headerlink" title="7.4 どれ、どの"></a>7.4 どれ、どの</h3><p>​ どれ　どの　是在三个以上的事物中，不能确定是哪一个时所用的疑问句。</p>
+<blockquote>
+<p>例句</p>
+<ol>
+<li>森（もり）さんの　かばん　は　どれ　ですか。 森先生的包是哪个？</li>
+<li>長島（ながしま）さんの　傘（かさ）　は　どれ　ですか。 长岛先生的伞是哪一把？</li>
+<li>小野（おの）さんの　机（つくえ）　は　どの　机（つくえ）　ですか。 小野女士的桌子是哪一张？</li>
+</ol>
+</blockquote>
+<h3 id="7-5-ここ、そこ、あそこ、どこ"><a href="#7-5-ここ、そこ、あそこ、どこ" class="headerlink" title="7.5 ここ、そこ、あそこ、どこ"></a>7.5 ここ、そこ、あそこ、どこ</h3><p>「 ここ、そこ、あそこ、どこ」是一组表示场所的指示词。</p>
 <ul>
-<li>要添加和修改其属性的对象 u</li>
-<li>第二个对象的属性和第一个对象中要添加或修改的属性一一对应。</li>
+<li><p>ここ 指说话人所在的场所</p>
+</li>
+<li><p>そこ 指说话人所在的场所</p>
+</li>
+<li><p>あそこ 指离双方都有一定距离，而双方都能看到的场所</p>
+</li>
+<li><p>どこ 表示疑问</p>
+</li>
+<li><p>当两人在一起时，</p>
+<ul>
+<li>双方共同所处的场所使用「ここ」</li>
+<li>稍远的场所使用「そこ」</li>
+<li>更远的、目光所及的场所使用「あそこ」</li>
 </ul>
+<blockquote>
+<p>例句</p>
+<ol>
+<li>ここ　は　佐藤先生（さとうせんせい）の　研究室（けんきゅうしつ）です</li>
+<li>そこ　の　机（つくえ）　は　だれ　の　机　ですか</li>
+<li>あそこ　は　映画館（えいがかん）　です</li>
+<li>どこ　が　佐藤先生（さとうせんせい）の　研究室（けんきゅうしつ）ですか</li>
+</ol>
+</blockquote>
 </li>
 </ul>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> book <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-
-Object<span class="token punctuation">.</span><span class="token function">defineProperties</span><span class="token punctuation">(</span>book<span class="token punctuation">,</span> <span class="token punctuation">{</span>
-  _year<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    writable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    value<span class="token punctuation">:</span> <span class="token number">2004</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  edition<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    writable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    value<span class="token punctuation">:</span> <span class="token number">1</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  year<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token keyword">get</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>_year
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token keyword">set</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>newValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>_year <span class="token operator">></span> newValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>_year <span class="token operator">=</span> newValue
-        <span class="token keyword">this</span><span class="token punctuation">.</span>edition <span class="token operator">+</span><span class="token operator">=</span> newValue <span class="token operator">-</span> <span class="token number">2014</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>book<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// {_year: 2004, edition: 1}</span></code></pre>
-<h3 id="6-1-4-读取属性的特性"><a href="#6-1-4-读取属性的特性" class="headerlink" title="6.1.4 读取属性的特性"></a>6.1.4 读取属性的特性</h3><ul>
-<li>通过 <code>Object.getOwnPropertyDescriptor()</code> 方法，可以取得给定属性的描述符</li>
-<li>接收两个参数：<ul>
-<li>属性所在的对象</li>
-<li>要读取其描述符的属性名称</li>
-</ul>
+<h2 id="8-表达场所"><a href="#8-表达场所" class="headerlink" title="8 .表达场所"></a>8 .表达场所</h2><ul>
+<li><p>后缀 [—館（かん） ] 和 [—室（しつ） ] 可以构成场所名词</p>
+<blockquote>
+<p>博物馆： 博物館（はくぶつかん）</p>
+<p>电影院： 映画館（えいがかん）</p>
+<p>研究室： 研究室（けんきゅうしつ） 教师工作的办公室</p>
+<p>办公室： 事務室（じむしつ） 处理行政工作的办公室</p>
+<p>图书室： 図書室（としょしつ）</p>
+<p>资料室： 資料室（しりょうしつ）</p>
+<p>候车室、候机室、候诊室：　待合室（まちあいしつ）</p>
+</blockquote>
+</li>
+<li><p>方位名词</p>
+<blockquote>
+<p>上：上（うえ）</p>
+<p>下：下（した）</p>
+<p>左：左（ひだり）</p>
+<p>右：右（みぎ）</p>
+</blockquote>
+<blockquote>
+<p>前面：前（まえ）</p>
+<p>后面：後ろ（うしろ）</p>
+<p>旁边：そば</p>
+<p>隔壁：となり</p>
+</blockquote>
+<blockquote>
+<p>里面：中（なか）</p>
+<p>外面：外（そと）</p>
+</blockquote>
 </li>
 </ul>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 接 6.1.3 示例代码</span>
-<span class="token keyword">var</span> descriptor <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyDescriptor</span><span class="token punctuation">(</span>book<span class="token punctuation">,</span> <span class="token string">'_year'</span><span class="token punctuation">)</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>descriptor<span class="token punctuation">.</span>value<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 2004</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>descriptor<span class="token punctuation">.</span>configurable<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// false</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> descriptor<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// undefined</span>
-
-<span class="token keyword">var</span> descriptor <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyDescriptor</span><span class="token punctuation">(</span>book<span class="token punctuation">,</span> <span class="token string">'year'</span><span class="token punctuation">)</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>descriptor<span class="token punctuation">.</span>value<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// undefined</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>descriptor<span class="token punctuation">.</span>enumerable<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// false</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> descriptor<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// "function"</span></code></pre>
+<h2 id="9-数词"><a href="#9-数词" class="headerlink" title="9. 数词"></a>9. 数词</h2><ul>
+<li><p>泛指各种物体的数量词，计数成块的东西，也可用于数数，有时用于年龄</p>
+<blockquote>
+<p>一（ひと）つ　二（ふた）つ　三（みっ）つ　四（よっ）つ　　五（いつ）つ</p>
+<p>六（むっ）つ　七（なな）つ　八（やっ）つ　九（ここの）つ　十（とお）</p>
+<p>いくつ？</p>
+<p>「ま行」「や行」开头的后缀，数字后半部分变促音</p>
+</blockquote>
+</li>
+<li><p>指代大件物品，例如汽车、冰箱等　相当于汉语的 “辆” 或 “台”</p>
+<blockquote>
+<p>一台（いちだい）　二台（にだい）　三台（さんだい）　四台（よんだい）</p>
+<p>五台（ごだい）　六台（ろくだい）　七台（しちだい）　八台（はちだい）</p>
+<p>九台（きゅうだい）　十台（じゅうだい）　何台（なんだい）</p>
+</blockquote>
+</li>
+<li><p>指代书籍，相当于汉语的 “本”，“册”</p>
+<blockquote>
+<p>一冊（いちさつ）　二冊（にさつ）　三冊（さんさつ）　四冊（よんさつ）</p>
+<p>五冊（ごさつ）　 六冊（ろくさつ）　七冊（ななさつ）　八冊（はっさつ）</p>
+<p>九冊（きゅうさつ） 十冊（じっさつ）　何冊（なんさつ）</p>
+<p>「サ行」开头的后缀，数字的后半部分都会变成促音。</p>
+</blockquote>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -631,7 +890,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://artoria-tsubaki.github.io/2020/07/17/js-zhong-de-mian-xiang-dui-xiang-yu-fa/">http://artoria-tsubaki.github.io/2020/07/17/js-zhong-de-mian-xiang-dui-xiang-yu-fa/</a>
+                    <a href="http://artoria-tsubaki.github.io/2020/07/22/ri-yu-xue-xi/">http://artoria-tsubaki.github.io/2020/07/22/ri-yu-xue-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -669,8 +928,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JavaScript/">
-                                    <span class="chip bg-color">JavaScript</span>
+                                <a href="/tags/%E6%97%A5%E8%AF%AD/">
+                                    <span class="chip bg-color">日语</span>
                                 </a>
                             
                         </div>
@@ -838,9 +1097,71 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/07/22/ri-yu-xue-xi/">
+                    <div class="card-image">
+                        
+                        <img src="https://img-1302665742.cos.ap-shenzhen-fsi.myqcloud.com/2020/07/zinoa_sundown.jpg" class="responsive-img" alt="日语学习">
+                        
+                        <span class="card-title">日语学习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            日语学习1. 输入语法
+促音 っ
+使用 ltu 或 xtu
+双重输入后一发音的第一个字母 がっき ： gakki
+
+
+
+2. 句型语法名词 + 【です】构成 名词谓语句
+动词谓语句可分为存在句和所在句
+
+肯定：……　は　……　です
+
+わたし
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%97%A5%E8%AF%AD/" class="post-category">
+                                    日语
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%97%A5%E8%AF%AD/">
+                        <span class="chip bg-color">日语</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/07/19/shu-ju-jie-gou-yu-suan-fa-er/">
                     <div class="card-image">
@@ -857,9 +1178,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -877,54 +1198,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     
                     <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
                         <span class="chip bg-color">数据结构与算法</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/07/17/javascript-de-xiao-tips/">
-                    <div class="card-image">
-                        
-                        <img src="https://img-1302665742.cos.ap-shenzhen-fsi.myqcloud.com/2020/07/fox.jpg" class="responsive-img" alt="javaScript的小tips">
-                        
-                        <span class="card-title">javaScript的小tips</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            一些个人 JavaScript 中遇到的坑和暂未掌握的知识点
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/JavaScript/" class="post-category">
-                                    JavaScript
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>
